@@ -1,5 +1,5 @@
 {% set name = "lume-epics" %}
-{% set version = "0.8" %}
+{% set version = "0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e07af16f70731d22e81260e34ad4bf2d9d5bfa17503bdb0328bde8745002a31e
+  sha256: 50d12a5b0404209914d6bb900f577b2d36b79b221f367c5e8e1724d6e9e278f2
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
   entry_points:
     - render-from-template = lume_epics.commands.render_from_template:serve_from_template
     - serve-from-template = lume_epics.commands.serve_from_template:serve_from_template
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -45,7 +45,7 @@ about:
   license: SLAC Open
   license_family: OTHER
   license_file: LICENSE
-  summary: Lume-epics is a dedicated API for serving LUME model variables with EPICS. 
+  summary: Lume-epics is a dedicated API for serving LUME model variables with EPICS.
   doc_url: https://slaclab.github.io/lume-epics/
   dev_url: https://github.com/slaclab/lume-epics
 
