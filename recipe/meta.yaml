@@ -1,5 +1,5 @@
 {% set name = "lume-epics" %}
-{% set version = "0.9" %}
+{% set version = "0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 50d12a5b0404209914d6bb900f577b2d36b79b221f367c5e8e1724d6e9e278f2
+  sha256: 5c66d576f74f141e6a68e8708c2ab7ec5c46c0a6325bf5685e8192317623e810
 
 build:
   noarch: python
