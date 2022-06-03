@@ -1,5 +1,5 @@
 {% set name = "lume-epics" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slaclab/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: f9fa7347db9a2f6a1105009a4b9ed6821283264289dcefba78efd7de32d40ed9
+  sha256: c2db7e25e96a9931a5029c08b46bf1d359fead4a2b5c0e9ecf6589032fa4d80e
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
     - numpy
     - bokeh
     - click
-    - lume-model >=0.8
+    - lume-model >=1.4
     - nose >=1.1.2
 
 test:
