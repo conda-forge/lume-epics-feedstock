@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - render-from-template = lume_epics.commands.render_from_template:serve_from_template
     - serve-from-template = lume_epics.commands.serve_from_template:serve_from_template
@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - epics-base
     - pyepics
     - pcaspy
@@ -39,6 +39,7 @@ test:
     - lume_epics
   requires:
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/slaclab/lume-epics
